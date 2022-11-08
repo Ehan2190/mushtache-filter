@@ -3,7 +3,7 @@ noseY=0;
 
 function preload()
 {
-clown_nose = loadImage('https://i.postimg.cc/Kjmbj3GJ/580b57fbd9996e24bc43bed5.png')
+mushtache = loadImage('https://i.postimg.cc/W4BKgTJQ/moustache-png-17165.png')
 }
 function setup()
 {
@@ -22,10 +22,10 @@ function gotPoses(results)
     if(results.length > 0)
     {
         console.log(results);
-        noseX = results[0].pose.nose.x-13;
-        noseY = results[0].pose.nose.y-13;
-        console.log("nose x = " + noseX);
-        console.log("nose y = " + noseY);
+        noseX = results[0].pose.nose.x-17;
+        noseY = results[0].pose.nose.y;
+        console.log(" nosex = " + noseX);
+        console.log(" nosey = " + noseY);
     }
 }
 
@@ -39,10 +39,10 @@ function draw()
 image(video, 0, 0, 300, 300);
 fill(255,0,0);
 stroke(255,0,0);
-image(clown_nose, noseX, noseY,30, 30);
+image(mushtache, noseX, noseY,40, 30);
 }
 
 function take_snapshot()
 {
-    save('myFilterImage.png');
+    save('mushtachefilter.png');
 }
